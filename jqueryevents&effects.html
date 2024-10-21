@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<Title>42120241-JQuery Events</Title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function()
+{
+  $("#Tweet_head").click(function()
+  {
+    $("#Tweet_text").slideDown("slow");
+    $("#Tweet_text").fadeOut("fast");
+    $("#Tweet_text").fadeIn("fast");
+  });
+});
+</script>
+<style> 
+#Tweet_text
+{
+  padding: 40px;
+  display: none;
+}
+#Tweet_text, #Tweet_head 
+{
+  padding: 5px;
+  font-size: 5px;
+  text-align: center;
+  background-color: Floralwhite;
+  border: solid 1px black;
+}
+.Tweet_pic
+{
+height: 15%;
+width:20%;
+margin:auto;
+}
+</style>
+</head>
+<body>
+<div id="Tweet_head">TWEET</div>
+<div id="Tweet_text"><p>Machine learning (ML) is a type of artificial intelligence (AI) that allows software applications to become more accurate at 
+predicting outcomes without being explicitly programmed to do so.<br>Machine learning algorithms use historical data as input to predict new output values.</p>
+<img class="Tweet_pic" src="sathyabama.jpg">
+<br>
+<center>Tweet by Visvaa J - 42120241 .</center>
+</div>
+</body>
+</html>
