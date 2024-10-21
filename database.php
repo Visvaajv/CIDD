@@ -59,5 +59,6 @@
         $conn->close();
     }
     ?>
+             // databse creation: mysql -u root -p , CREATE DATABASE register; , USE register; ,CREATE TABLE datainfo (id INT(11) AUTO_INCREMENT PRIMARY KEY, Name VARCHAR(100), RegNo INT(11)); , SHOW TABLES; , DESCRIBE datainfo; //
 </body>
 </html>
