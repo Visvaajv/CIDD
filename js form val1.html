@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+    <style>
+        body {
+            background-image: url('sathyabama.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        center {
+            color: white;
+        }
+        h1, h3, h2 {
+            margin: 0;
+        }
+        form {
+            color: LightCyan;
+        }
+    </style>
+    <script>
+        function validate() {
+            const form = document.form1;
+            const name = form.name.value.trim();
+            const email = form.email.value.trim();
+            const age = form.age.value.trim();
+            const address = form.addrs.value.trim();
+            const phno = form.phno.value.trim();
+            const programme = form.pro.value;
+
+            if (!name || !/^[a-zA-Z]+$/.test(name)) {
+                alert("Enter a valid name");
+                form.name.focus();
+                return;
+            }
+            if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
+                alert("Enter a valid email");
+                form.email.focus();
+                return;
+            }
+            if (!age || isNaN(age)) {
+                alert("Enter a valid age");
+                form.age.focus();
+                return;
+            }
+            if (!address) {
+                alert("Enter the address");
+                form.addrs.focus();
+                return;
+            }
+            if (!phno || isNaN(phno)) {
+                alert("Enter a valid phone number");
+                form.phno.focus();
+                return;
+            }
+            if (!programme) {
+                alert("Select your Programme");
+                return;
+            }
+
+            // Display confirmation
+            const details = `
+                <h1>Order Confirmation Details</h1>
+                Name: ${name}<br>
+                Email: ${email}<br>
+                Age: ${age}<br>
+                Address: ${address}<br>
+                Phone: ${phno}<br>
+                Programme: ${programme}
+            `;
+            const w1 = window.open('', '_blank');
+            w1.document.write(details);
+        }
+    </script>
+</head>
+<body>
+    <center style="background-color: bisque;"><font color="black">
+        <h1>SATHYABAMA</h1>
+        <h3>INSTITUTE OF SCIENCE AND TECHNOLOGY</h3>
+        <h2>(REGISTRATION)</h2>
+        <h1><u>USER PROFILE</u></h1>
+    </center></font><br><br>
+    <center>
+        <form name="form1" method="get">
+            Name: <input type="text" name="name" maxlength="15"><br><br>
+            E-mail: <input type="text" name="email"><br><br>
+            Age: <input type="text" name="age"><br><br>
+            Address: <textarea name="addrs" rows="4" cols="20"></textarea><br><br>
+            Phone No: <input type="text" name="phno"><br><br>
+            Programme: 
+            <input type="radio" name="pro" value="B.Tech">B.Tech
+            <input type="radio" name="pro" value="BE">BE
+            <input type="radio" name="pro" value="B.Sc">B.Sc
+            <input type="radio" name="pro" value="B.B.A">B.B.A<br><br>
+            <input type="button" value="Submit" onclick="validate()">
+            <input type="reset" value="Clear">
+        </form>
+    </center>
+</body>
+</html>

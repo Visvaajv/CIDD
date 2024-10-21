@@ -1,0 +1,62 @@
+<!doctype html>
+<html ng-app="myModule">
+<head>
+    <title>AngularJS Book Details</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <style>
+        body {
+            font-family: Arial;
+        }
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <script>
+        var myApp = angular.module("myModule", [])
+            .controller("myController", function($scope) 
+            {
+                $scope.books = [
+                    {title: "Junior Level Books Introduction to Computer", author: "Amit Garg", publisher: "Reader's Zone", price: "Rs.200/-"},
+                    {title: "Client Server Computing", author: "Lalit Kumar", publisher: "Sun India Publications", price: "Rs.400/-"},
+                    {title: "Mobile Computing", author: "Vinay Kumar Singhal", publisher: "K Nath & Sons", price: "Rs.150/-"},
+                    {title: "CBOT", author: "Verma", publisher: "Thakur Publications", price: "Rs.80/-"}
+                ];
+            });
+    </script>
+</head>
+<body>
+    <center>
+        <h1>The Book Details</h1>
+        <div ng-controller="myController">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title of Book</th>
+                        <th>Author Name</th>
+                        <th>Publisher Name</th>
+                        <th>Price of the Book</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="book in books">
+                        <td>{{book.title | uppercase}}</td>
+                        <td>{{book.author}}</td>
+                        <td>{{book.publisher}}</td>
+                        <td>{{book.price}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </center>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h1{
+                color: black;
+                
+            }
+            body{
+                text-align: center;
+                background-color:floralwhite;
+            }
+            #hide{
+                width: 50px;
+                margin: 0 auto;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function()
+            {
+                $("#hide").click(function()
+                {
+                $("p").hide();
+            });
+            $("#show").click(function()
+            {
+            $("p").show();
+            });
+});
+        </script>
+    </head>
+    <body>
+        <h1>jQUERY SELECTORS</h1>
+        <h2>(42120241 - Visvaa J)</h2>
+        <div id="test">
+        <h2 style="color: brown">Sathyabama University</h2>
+        <p style="color: red">On clicking hide button...This line will be diappeared</p>
+        <button id="hide" style="background-color: brown; color:whitesmoke">Hide</button>&nbsp;
+        <button id="show" style="background-color: brown; color:whitesmoke"> Show</button>&nbsp;
+        <button id="unselect" style="background-color: brown; color:whitesmoke">Unselect</button>
+        </div>
+    </body>
+</html>

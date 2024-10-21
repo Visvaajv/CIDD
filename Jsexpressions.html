@@ -1,0 +1,39 @@
+<!doctype html>
+<html ng-app>
+ <head>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+ <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/twitterbootstrap/2.0.4/css/bootstrap-combined.min.css">
+ </head>
+ <body ng-app>
+ <h1><center>Angular JS Expressions</center></h1>
+ <div>
+ <h3>Angular JS Expressions for Evaluation</h3>
+ The value is: {{1+2*2}}
+ </div>
+ <div>
+ <h3>Angular JS Expressions for Array</h3>
+ The Array : {{[1,2,3,4,5,6,7,8,9][4]}}
+ </div>
+ <h3>Angular JS Expressions for Opertors</h3>
+ <div>
+ The Opertors is: {{1==1}}
+ </div>
+ <div>
+ The Opertors is: {{1==2}}
+ </div>
+ <h3>Angular JS Expressions for Numbers</h3>
+ <div ng-init="a=100;b=50">
+ the sum is: {{(a+b)}}
+ 
+ </div>
+ <h3>Angular JS Expressions for String</h3>
+ <div ng-init="s1='Welcome';s2='AngularJS'">
+ {{(s1+s2)}}
+ 
+ </div>
+ <h3>Angular JS Expressions for objects</h3>
+ <div ng-init="obj={s1:'Thank',s2:'You'}">
+ {{(obj.s1+" "+obj.s2)}}
+ </div> 
+</body>
+</html>
